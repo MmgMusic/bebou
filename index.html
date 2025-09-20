@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un cadeau mystère !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="password-container">
+        <h1>Un cadeau mystère !</h1>
+        <p>Pour percer ce secret, tu dois d'abord entrer le mot de passe :</p>
+        <input type="password" id="password-input">
+        <button id="password-button">Accéder</button>
+        <p id="password-message"></p>
+    </div>
+
+    <div id="content-container" class="hidden">
+        <h1>Joyeux anniversaire !</h1>
+        <p>Pour découvrir ton cadeau, déchiffre ces messages en Coréen. Tape les syllabes en "européen" et vois le texte se dévoiler !</p>
+
+        <div class="riddle-section">
+            <h2>Énigme 1</h2>
+            <div class="korean-text-container">
+                <span data-roman="ma">마</span><span data-roman="jang">장</span><span data-roman="dong">동</span> <span data-roman="han">한</span><span data-roman="u">우</span> <span data-roman="1++">1++</span>
+            </div>
+            <p id="riddle1-unlocked-text" class="unlocked-text"></p>
+            <input type="text" id="riddle1-input" placeholder="Tape le texte en Coréen Romanisé...">
+            <button id="riddle1-check">Vérifier la réponse</button>
+            <p id="riddle1-message" class="message"></p>
+        </div>
+
+        <div class="riddle-section">
+            <h2>Énigme 2</h2>
+            <div class="korean-text-container">
+                <span data-roman="han">한</span><span data-roman="ga">가</span><span data-roman="ram">람</span> <span data-roman="han">한</span><span data-roman="jeong">정</span><span data-roman="sik">식</span>
+            </div>
+            <p id="riddle2-unlocked-text" class="unlocked-text"></p>
+            <input type="text" id="riddle2-input" placeholder="Tape le texte en Coréen Romanisé...">
+            <button id="riddle2-check">Vérifier la réponse</button>
+            <p id="riddle2-message" class="message"></p>
+        </div>
+        
+        <div id="gift-reveal" class="hidden">
+            <p>Félicitations ! Tu as tout trouvé !</p>
+            <h3>Ton cadeau est...</h3>
+            <p>Un dîner spécial au restaurant coréen pour savourer du <span class="keyword">Hanwoo</span> et un <span class="keyword">Han-jeongsik</span> !</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
